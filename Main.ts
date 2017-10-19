@@ -1,5 +1,5 @@
-var tetrahedron1 = new Tetrahedron1();
-var cube = new Cube();
+var tetrahedron1 = new Polyhedron(tetrahedron1Faces());
+var cube = new Polyhedron(cubeFaces());
 var sphere = 0;
 var cut = 0;
 var choice = "cube";
