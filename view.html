@@ -12,13 +12,22 @@
 </head>
 
 <body>
-    <canvas id="cnv" 
+  <input id="rng" type="range" value="0" oninput="slide()">
+  <input id="cut" type="range" value="0" min="0" max="10" step="1" oninput="slide()">
+  <canvas id="cnv" 
     width="500"
     height="500"
     onmousedown="canvasDrag();"
     onmouseup="canvasStopDrag();"
-    onwheel="canvasWheel();"></div>
+    onwheel="canvasWheel();">
 <script src="http://web.cs.elte.hu/~papjuli/three.js"></script>
 <script src="http://web.cs.elte.hu/~papjuli/TrackballControls.js"></script>
+<script src="3D.js"></script>
+<script src="Point.js"></script>
+<script src="Segment.js"></script>
+<script src="Geometry.js"></script>
+<script src="Face.js"></script>
+<script src="Cube.js"></script>
+<script src="Main.js"></script>
 </body>
 </html>
