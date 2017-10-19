@@ -8,7 +8,7 @@ var Face = /** @class */ (function () {
         this.otherMesh = null;
     }
     Face.face = function (a, b, c, d) {
-        return new Face(new Segment(a, d), new Segment(c, b));
+        return new Face(new Segment(a, d), new Segment(b, c));
     };
     Face.prototype.corner = function (i, j) {
         return new Segment(this.left.interpolate(i), this.right.interpolate(i)).interpolate(j);

@@ -1,4 +1,5 @@
 var tetrahedron1 = new Polyhedron(tetrahedron1Faces());
+var tetrahedron2 = new Polyhedron(tetrahedron2Faces());
 var cube = new Polyhedron(cubeFaces());
 var sphere = 0;
 var cut = 0;
@@ -8,11 +9,14 @@ doRender();
 function choicePoly() {
     if (choice == "tetrahedron1")
         return tetrahedron1;
+    if (choice == "tetrahedron2")
+        return tetrahedron2;
     return cube;
 }
 function hideAll() {
     cube.hide();
     tetrahedron1.hide();
+    tetrahedron2.hide();
 }
 function renderPoly(which) {
     hideAll();

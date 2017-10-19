@@ -12,7 +12,7 @@ class Face {
     private otherMesh : any;
 
     public static face(a : Point, b : Point, c : Point, d : Point) {
-        return new Face(new Segment(a, d), new Segment(c, b));
+        return new Face(new Segment(a, d), new Segment(b, c));
     }
 
     private corner(i : number, j : number) : Point {
