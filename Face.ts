@@ -26,9 +26,13 @@ class Face {
         }
     }
 
-    public render(scene : any, sphere : number, cut : number) : void {
+    public hide() : void {
         this.removeMesh(this.middleMesh);
         this.removeMesh(this.otherMesh);
+    }
+
+    public render(scene : any, sphere : number, cut : number) : void {
+        this.hide();
         var middleGeometry = new Geometry(new THREE.Geometry());
         var otherGeometry = new Geometry(new THREE.Geometry());
         var n = 21;
@@ -37,7 +41,7 @@ class Face {
             for (var j = cut; j < n-cut; ++j) {
                 var x = i / n;
                 var y = j / n;
-                
+
                 ((j % 3 == 1) ? middleGeometry : otherGeometry).quad(
                     this.corner(x,y), this.corner(x+step, y),
                     this.corner(x+step, y+step), this.corner(x, y+step),

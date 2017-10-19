@@ -29,6 +29,12 @@ var Cube = /** @class */ (function () {
             face.render(scene, sphere, cut);
         }
     };
+    Cube.prototype.hide = function () {
+        for (var _i = 0, _a = this.faces; _i < _a.length; _i++) {
+            var face = _a[_i];
+            face.hide();
+        }
+    };
     return Cube;
 }());
 //# sourceMappingURL=Cube.js.map

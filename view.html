@@ -12,6 +12,10 @@
 </head>
 
 <body>
+  <form>
+    <input type="radio" name="poly" value="tetrahedron1" onclick="renderPoly(this);"/> Tetrahedron1 <br>
+    <input type="radio" name="poly" value="cube" onclick="renderPoly(this);" checked="✓"/> Cube <br>
+  </form>
   <input id="rng" type="range" value="0" oninput="slide()">
   <input id="cut" type="range" value="0" min="0" max="10" step="1" oninput="slide()">
   <canvas id="cnv" 
@@ -28,6 +32,7 @@
 <script src="Geometry.js"></script>
 <script src="Face.js"></script>
 <script src="Cube.js"></script>
+<script src="Tetrahedron1.js"></script>
 <script src="Main.js"></script>
 </body>
 </html>

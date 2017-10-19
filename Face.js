@@ -19,9 +19,12 @@ var Face = /** @class */ (function () {
             mesh.geometry.dispose();
         }
     };
-    Face.prototype.render = function (scene, sphere, cut) {
+    Face.prototype.hide = function () {
         this.removeMesh(this.middleMesh);
         this.removeMesh(this.otherMesh);
+    };
+    Face.prototype.render = function (scene, sphere, cut) {
+        this.hide();
         var middleGeometry = new Geometry(new THREE.Geometry());
         var otherGeometry = new Geometry(new THREE.Geometry());
         var n = 21;

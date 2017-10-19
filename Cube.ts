@@ -30,4 +30,10 @@ class Cube {
             face.render(scene, sphere, cut);
         }
     }
+
+    public hide() : void {
+        for (let face of this.faces) {
+            face.hide();
+        }
+    }
 }
