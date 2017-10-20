@@ -1,6 +1,6 @@
 class Polyhedron {
     constructor(private faces : Face[]) {}
-    
+
     public render(scene : any, sphere : number, cut : number) : void {
         for (let face of this.faces) {
             face.render(scene, sphere, cut);
@@ -10,6 +10,12 @@ class Polyhedron {
     public hide() : void {
         for (let face of this.faces) {
             face.hide();
+        }
+    }
+
+    public setWhite(white : boolean) : void {
+        for (let face of this.faces) {
+            face.setWhite(white);
         }
     }
 }

@@ -6,6 +6,11 @@ var cut = 0;
 var choice = "cube";
 choicePoly().render(scene, sphere, cut);
 doRender();
+function changeColor(box) {
+    choicePoly().setWhite(box.checked);
+    console.log("Change color");
+    doRender();
+}
 function choicePoly() {
     if (choice == "tetrahedron1")
         return tetrahedron1;

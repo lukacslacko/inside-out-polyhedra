@@ -19,6 +19,7 @@
   </form>
   <input id="rng" type="range" value="0" oninput="slide()">
   <input id="cut" type="range" value="0" min="0" max="10" step="1" oninput="slide()">
+  <input id="white" type="checkbox" onclick="changeColor(this)">
   <canvas id="cnv" 
     width="500"
     height="500"
@@ -32,6 +33,7 @@
 <script src="Segment.js"></script>
 <script src="Geometry.js"></script>
 <script src="Face.js"></script>
+<script src="Mesh.js"></script>
 <script src="Cube.js"></script>
 <script src="Tetrahedron1.js"></script>
 <script src="Tetrahedron2.js"></script>

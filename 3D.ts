@@ -17,7 +17,7 @@ controls.dynamicDampingFactor = 0.3;
 
 
         // add subtle ambient lighting
-        var ambientLight = new THREE.AmbientLight(0x505050);
+        var ambientLight = new THREE.AmbientLight(0x808080);
         scene.add(ambientLight);
         // add spotlight for the shadows
         var spotLight = new THREE.SpotLight(0xffffff);
