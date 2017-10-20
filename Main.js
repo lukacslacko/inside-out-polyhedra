@@ -1,7 +1,8 @@
 var polyhedra = {
     "tetrahedron1": new Polyhedron(tetrahedron1Faces()),
     "tetrahedron2": new Polyhedron(tetrahedron2Faces()),
-    "cube": new Polyhedron(cubeFaces())
+    "cube": new Polyhedron(cubeFaces()),
+    "octahedron": new Polyhedron(octahedronFaces()),
 };
 var sphere = 0;
 var cut = 0;
