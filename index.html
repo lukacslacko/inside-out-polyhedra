@@ -1,5 +1,43 @@
 <html>
-    <body>
-        Hello world!
-    </body>
+<head>
+  <meta charset=utf-8>
+  <title>Sphere</title>
+  <style>
+    body { 
+    margin: 0; 
+    padding: 0;
+    background: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <input type="radio" name="poly" value="tetrahedron1" onclick="renderPoly(this);"/> Tetrahedron1 <br>
+    <input type="radio" name="poly" value="tetrahedron2" onclick="renderPoly(this);"/> Tetrahedron2 <br>
+    <input type="radio" name="poly" value="cube" onclick="renderPoly(this);" checked="✓"/> Cube <br>
+  </form>
+  <input id="rng" type="range" value="0" oninput="slide()">
+  <input id="cut" type="range" value="0" min="0" max="10" step="1" oninput="slide()">
+  <input id="white" type="checkbox" onclick="changeColor(this)">
+  <canvas id="cnv" 
+    width="500"
+    height="500"
+    onmousedown="canvasDrag();"
+    onmouseup="canvasStopDrag();"
+    onwheel="canvasWheel();">
+<script src="http://web.cs.elte.hu/~papjuli/three.js"></script>
+<script src="http://web.cs.elte.hu/~papjuli/TrackballControls.js"></script>
+<script src="3D.js"></script>
+<script src="Point.js"></script>
+<script src="Segment.js"></script>
+<script src="Geometry.js"></script>
+<script src="Face.js"></script>
+<script src="Mesh.js"></script>
+<script src="Cube.js"></script>
+<script src="Tetrahedron1.js"></script>
+<script src="Tetrahedron2.js"></script>
+<script src="Polyhedron.js"></script>
+<script src="Main.js"></script>
+</body>
 </html>
