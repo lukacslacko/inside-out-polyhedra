@@ -15,7 +15,8 @@ var Mesh = /** @class */ (function () {
         scene.add(this.mesh);
     };
     Mesh.prototype.changeMaterial = function (m) {
-        this.mesh.material = m;
+        if (this.mesh != null)
+            this.mesh.material = m;
         this.material.dispose();
         this.material = m;
     };

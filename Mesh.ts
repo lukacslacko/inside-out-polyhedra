@@ -19,7 +19,7 @@ class Mesh {
     }
 
     public changeMaterial(m : any) : void {
-        this.mesh.material = m;
+        if (this.mesh != null) this.mesh.material = m;
         this.material.dispose();
         this.material = m;
     }
