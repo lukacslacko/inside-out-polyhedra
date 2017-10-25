@@ -3,6 +3,7 @@ var polyhedra = {
     "tetrahedron2": new Polyhedron(tetrahedron2Faces()),
     "cube": new Polyhedron(cubeFaces()),
     "octahedron": new Polyhedron(octahedronFaces()),
+    "dodecahedron": new Polyhedron(dodecahedronFaces())
 };
 var sphere = 0;
 var cut = 0;
