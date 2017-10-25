@@ -33,6 +33,14 @@ class Face {
         }
     }
 
+    public setTransparent(transparent : boolean) : void {
+        if (transparent) {
+            this.edge.changeMaterial(new THREE.MeshLambertMaterial({color: 0xffffff, transparent: true, opacity: 0}));
+        } else {
+            this.edge.changeMaterial(new THREE.MeshLambertMaterial({color: 0x400000}));            
+        }
+    }
+
     public render(scene : any, sphere : number, cut : number) : void {
         this.hide();
         var middleGeometry = new Geometry(new THREE.Geometry());

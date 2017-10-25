@@ -13,14 +13,17 @@
 
 <body>
   <form>
-    <input type="radio" name="poly" value="tetrahedron1" onclick="renderPoly(this);"/> Tetrahedron1 <br>
-    <input type="radio" name="poly" value="tetrahedron2" onclick="renderPoly(this);"/> Tetrahedron2 <br>
-    <input type="radio" name="poly" value="cube" onclick="renderPoly(this);" checked="✓"/> Cube <br>
-    <input type="radio" name="poly" value="octahedron" onclick="renderPoly(this)"/> Octahedron <br>
+    <label><input type="radio" name="poly" value="tetrahedron1" onclick="renderPoly(this);"/> Tetrahedron1 </label> <br>
+    <label><input type="radio" name="poly" value="tetrahedron2" onclick="renderPoly(this);"/> Tetrahedron2 </label> <br>
+    <label><input type="radio" name="poly" value="cube" onclick="renderPoly(this);" checked="✓"/> Cube </label> <br>
+    <label><input type="radio" name="poly" value="octahedron" onclick="renderPoly(this)"/> Octahedron </label> <br>
   </form>
-  <input id="rng" type="range" value="0" oninput="slide()">
-  <input id="cut" type="range" value="0" min="0" max="10" step="1" oninput="slide()">
-  <input id="white" type="checkbox" onclick="changeColor(this)">
+  <form>
+    <label>Roundness <input id="rng" type="range" value="0" oninput="slide()"></label><br>
+    <label>Edge <input id="cut" type="range" value="0" min="0" max="10" step="1" oninput="slide()"></label><br>
+    <label>White <input id="white" type="checkbox" onclick="changeColor(this)"></label><br>
+    <label>Transparent edge <input id="translucent" type="checkbox" onclick="changeTranslucent(this)"></label><br>
+  </form>
   <canvas id="cnv" 
     width="500"
     height="500"

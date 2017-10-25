@@ -17,6 +17,11 @@ function changeColor(box) : void {
     doRender();
 }
 
+function changeTranslucent(box) : void {
+    for (let i in polyhedra) polyhedra[i].setTransparent(box.checked);
+    doRender();
+}
+
 function hideAll() : void {
     for (let i in polyhedra) polyhedra[i].hide();
 }

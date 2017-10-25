@@ -18,4 +18,10 @@ class Polyhedron {
             face.setWhite(white);
         }
     }
+
+    public setTransparent(transparent : boolean) : void {
+        for (let face of this.faces) {
+            face.setTransparent(transparent);
+        }
+    }
 }

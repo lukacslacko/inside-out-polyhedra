@@ -15,6 +15,11 @@ function changeColor(box) {
     console.log("Change color");
     doRender();
 }
+function changeTranslucent(box) {
+    for (var i in polyhedra)
+        polyhedra[i].setTransparent(box.checked);
+    doRender();
+}
 function hideAll() {
     for (var i in polyhedra)
         polyhedra[i].hide();

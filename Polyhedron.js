@@ -20,6 +20,12 @@ var Polyhedron = /** @class */ (function () {
             face.setWhite(white);
         }
     };
+    Polyhedron.prototype.setTransparent = function (transparent) {
+        for (var _i = 0, _a = this.faces; _i < _a.length; _i++) {
+            var face = _a[_i];
+            face.setTransparent(transparent);
+        }
+    };
     return Polyhedron;
 }());
 //# sourceMappingURL=Polyhedron.js.map
