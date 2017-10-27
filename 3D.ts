@@ -32,7 +32,8 @@ function doRender() {
 var animId;
 
 function animate() {
-	animId = requestAnimationFrame( animate );
+  animId = requestAnimationFrame( animate );
+  spotLight.position.copy( camera.position );
     renderer.render( scene, camera );
     controls.update();
 }
